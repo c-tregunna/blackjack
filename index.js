@@ -1,8 +1,17 @@
 //******VARIABLES******//
+let name = prompt('Welcome to Blackjack, what is your name?');
+
 let player = {
-    name: "Claire",
+    name: name,
     chips: 150
 }
+
+if (name === null) {
+    player.name = "Player"
+} else if (name === "") {
+    player.name = "Player"
+}
+
 let cards = []; //array that contains the cards. empty to start with as cards not added till starting game
 let sum = 0; // no cards yet so sume = 0;
 let hasBlackJack = false;
